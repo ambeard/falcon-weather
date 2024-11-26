@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=714de6fbdb94cb8dde1e839ec1e33776&lang=en&lat=37.7609&lon=-122.2368&units=standard
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json
+      User-Agent:
+      - OpenWeather Ruby Client/1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 26 Nov 2024 00:57:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '502'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lang=en&lat=37.76&lon=-122.24&units=standard"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-122.2368,"lat":37.7609},"weather":[{"id":701,"main":"Mist","description":"mist","icon":"50n"}],"base":"stations","visibility":2414,"wind":{"speed":3.6,"deg":90},"clouds":{"all":100},"dt":1732582374,"sys":{"type":2,"id":2016374,"country":"US","sunrise":1732546826,"sunset":1732582334},"timezone":-28800,"id":5322737,"name":"Alameda","cod":200}'
+  recorded_at: Tue, 26 Nov 2024 00:57:15 GMT
+recorded_with: VCR 6.3.1

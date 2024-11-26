@@ -1,24 +1,66 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+### Set ArcGIS API credentials
 
-* System dependencies
+Edit Rails credentials:
 
-* Configuration
+```sh
+EDITOR="emacs -nw"  bin/rails credentials:edit
+```
 
-* Database creation
+Add your real ArcGIS credentials:
 
-* Database initialization
+```ruby
+arcgis_api_user_id: ambeard
+arcgis_api_secret_key: 123456
+```
 
-* How to run the test suite
+## Join OpenWeather API
 
-* Services (job queues, cache servers, search engines, etc.)
+Sign up at <https://openweathermap.org>
 
-* Deployment instructions
+* The process creates your API key.
 
-* ...
+
+### Set OpenWeather API credentials
+
+Edit Rails credentials:
+
+```sh
+EDITOR="emacs -nw"  bin/rails credentials:edit
+```
+
+Add your OpenWeather credentials by replacing these fake credentials with your real credentials:
+
+```ruby
+openweather_api_key: 987654321
+```
+
+### Enable the cache
+
+Enable the Rails development cache, so a developer can see that the forecasts are cached as expected.
+
+
+```sh
+bin/rails dev:cache
+```
+
+## Run the specs
+
+Use tthe following command to run all specs:
+
+```sh
+% bundle exec rspec spec
+```
+
+## Run the server locally
+
+Use tthe following command to run the server:
+
+```sh
+% bin/dev
+```
+
+In your browser, navigate to <http://127.0.0.1:3000>

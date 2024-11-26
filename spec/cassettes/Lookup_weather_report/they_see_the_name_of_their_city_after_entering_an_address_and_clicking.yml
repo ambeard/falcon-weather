@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://nominatim.openstreetmap.org/search?accept-language=en&addressdetails=1&format=json&q=1368%20Versailles%20Ave,%20Alameda,%20CA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - ambeard
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 26 Nov 2024 03:11:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '739'
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=20
+    body:
+      encoding: UTF-8
+      string: '[{"place_id":298781862,"licence":"Data © OpenStreetMap contributors,
+        ODbL 1.0. http://osm.org/copyright","osm_type":"way","osm_id":465944677,"lat":"37.76087029999999","lon":"-122.23680482327845","class":"building","type":"yes","place_rank":30,"importance":6.044022278167418e-05,"addresstype":"building","name":"","display_name":"1368,
+        Versailles Avenue, East End, Alameda, Alameda County, California, 94502, United
+        States","address":{"house_number":"1368","road":"Versailles Avenue","neighbourhood":"East
+        End","city":"Alameda","county":"Alameda County","state":"California","ISO3166-2-lvl4":"US-CA","postcode":"94502","country":"United
+        States","country_code":"us"},"boundingbox":["37.7608055","37.7609404","-122.2368863","-122.2367278"]}]'
+  recorded_at: Tue, 26 Nov 2024 03:11:27 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/weather?appid=714de6fbdb94cb8dde1e839ec1e33776&lang=en&lat=37.76087029999999&lon=-122.23680482327845&units=standard
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json; charset=utf-8
+      Content-Type:
+      - application/json
+      User-Agent:
+      - OpenWeather Ruby Client/1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 26 Nov 2024 03:11:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '518'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/weather?lang=en&lat=37.76&lon=-122.24&units=standard"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"coord":{"lon":-122.2368,"lat":37.7609},"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"base":"stations","main":{"temp":285.67,"feels_like":285.3,"temp_min":284.77,"temp_max":286.82,"pressure":1016,"humidity":89,"sea_level":1016,"grnd_level":1010},"visibility":10000,"wind":{"speed":4.12,"deg":240},"clouds":{"all":100},"dt":1732590687,"sys":{"type":2,"id":2016374,"country":"US","sunrise":1732546826,"sunset":1732582334},"timezone":-28800,"id":5322737,"name":"Alameda","cod":200}'
+  recorded_at: Tue, 26 Nov 2024 03:11:27 GMT
+recorded_with: VCR 6.3.1
